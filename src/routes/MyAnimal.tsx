@@ -20,6 +20,7 @@ const MyAnimal: FC<MyAnimalProps> = ({ account }) => {
   }, [animalCardArray]);
 
   const getAnimalTokens = async () => {
+    console.log(account);
     try {
       const balanceLength = await mintAnimalTokenContract.methods
         .balanceOf(account)
